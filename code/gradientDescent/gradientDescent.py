@@ -4,7 +4,6 @@
 import matplotlib.pyplot as plt
 from numpy import *
 
-plt.ion
 
 points = genfromtxt("./points.csv", delimiter=",")
 
@@ -45,29 +44,24 @@ def doTheDescent(beginning_b, beginning_m, learning_rate, epoches):
 
     for i in range(epoches):
         b, m = stepInDirectionOfGradient(b, m, learning_rate)
-        
-        #---------------PLOT THE POINTS--------------------------#
-
-        lineyPoints = []
-        for i in range(0, len(points)):
-            lineyPoints.append(points[i, 0] * m + b)
-
-        plt.plot(xPoints, yPoints, 'ro')
-        plt.plot(xPoints, lineyPoints)
-        plt.show()
     return [b, m]
 
 
 def runDownTheMountain():
-
-    #---------------DO THE MATH STUFF-----------------------#
-
     initial_m = 0
     initial_b = 0
     learningRate = 0.0001
     epoches = 1000
     print("crossing fingers...")
     [b, m] = doTheDescent(initial_b, initial_m, learningRate, epoches)    
+    
+    lineyPoints = []
+    for i in range(0, len(points)):
+        lineyPoints.append(points[i, 0]* m + b)
+
+    plt.plot(xPoints, yPoints, 'ro')
+    plt.plot(xPoints, lineyPoints)
+    plt.show()
     print ("After {0} iterations b = {1}, m = {2}, error = {3}".format(epoches, b, m, calculateError(b, m)))
 
 
