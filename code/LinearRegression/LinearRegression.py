@@ -1,4 +1,4 @@
-# Created following https://towardsdatascience.com/introduction-to-linear-regression-in-python-c12a072bedf0
+# From https://towardsdatascience.com/introduction-to-linear-regression-in-python-c12a072bedf0
 # Just to stress, this is mainly the code from the above article, but changed a bit as I messed around with it to figure it out.
 
 import pandas as pd #provides dataframe

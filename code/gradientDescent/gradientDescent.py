@@ -1,4 +1,4 @@
-# the code I followed while writing this: https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/
+# From https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/
 #https://github.com/mattnedrich/GradientDescentExample
 
 import matplotlib.pyplot as plt
