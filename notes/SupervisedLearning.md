@@ -53,3 +53,25 @@ Partial derivatives are basically taking the derivative with respect to one inpu
 To avoid overfitting, the model has to be generic.
 - Use as much training data as possible
 - add a penalty for overfitting using a regularization term
+
+# Label Prediction
+Predicting labels or classes based on some input
+
+## Logistic Regression
+Insead of using a line, we use a logs and stuff. 
+
+Gives probability of a thing belonging to a class
+
+To do this it uses a sigmoid function to squish the probability between 0 and 1 to make a percent.
+
+The thing that we are sqishing to between 0 and 1 is the liklihood of whatever our input is being something divided by the probability of that not happening. Basically
+
+sigmoid(probability that thing happens)
+
+or mathematically:
+ln(p/(p-1)) = b + mx + epsilon
+
+To minimize loss we do gradient descent
+
+## Support Vector Machines
+SVMs basically just draw a line(or hyperplane depending on how many dimensions you're in) separating your input spaces into "classification zones."
